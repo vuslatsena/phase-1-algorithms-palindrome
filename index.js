@@ -1,5 +1,12 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let reversedWord = "";
+
+  for (let i = word.length - 1; i >= 0; i--) {
+    reversedWord += word[i];
+  }
+
+  return reversedWord === word;
 }
 
 /* 
@@ -17,6 +24,12 @@ if (require.main === module) {
   console.log("=>", isPalindrome("racecar"));
 
   console.log("");
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("deified"));
+
+  console.log("");
+
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
